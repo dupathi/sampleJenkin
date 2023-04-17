@@ -9,7 +9,7 @@ pipeline {
               
            stage('Build') {
             steps {
-                bat 'start /b mvn clean package'
+                bat 'start /b mvn clean install'
             }
         }
         stage('Test') {

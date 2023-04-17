@@ -1,7 +1,13 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('checkout') {
+            steps {
+                git 'https://github.com/venddy/pipeline.git'
+            }
+        }
+              
+           stage('Build') {
             steps {
                 sh 'mvn clean package'
             }

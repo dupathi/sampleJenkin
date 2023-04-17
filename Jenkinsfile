@@ -9,18 +9,14 @@ pipeline {
               
            stage('Build') {
             steps {
-                sh 'mvn clean package'
+                bat 'start /b mvn clean package'
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn test'
+                bat 'start /b mvn test'
             }
         }
-        stage('Deploy') {
-            steps {
-                sh 'java -jar target/myapp.jar'
-            }
         }
     }
 }

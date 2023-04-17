@@ -17,6 +17,5 @@ pipeline {
                 bat 'start /b mvn test'
             }
         }
-        }
     }
 }
